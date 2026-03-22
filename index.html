@@ -785,23 +785,51 @@
     .reveal-d3 { transition-delay: 0.3s; }
     .reveal-d4 { transition-delay: 0.4s; }
 
-    /* ── RESPONSIVE ───────────────────────────────────────── */
-    @media (max-width: 768px) {
-      .nav              { padding: 0 24px; }
-      .nav-links        { display: none; }
-      .hero             { padding: 100px 24px 140px; }
-      .hero-geo         { display: none; }
-      .hero-stats       { right: 24px; left: 24px; flex-wrap: wrap; }
-      .stat-item        { padding: 20px 0 20px 24px; margin-left: 24px; }
-      section.section   { padding: 72px 24px; }
-      .services-grid    { grid-template-columns: 1fr; }
-      .why-grid         { grid-template-columns: 1fr; }
-      .why-item         { border-left: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
-      .why-item:last-child { border-bottom: none; }
-      .process-steps    { grid-template-columns: 1fr 1fr; gap: 40px 24px; }
+    /* ── RESPONSIVE — Tablet ──────────────────────────────── */
+    @media (max-width: 1024px) {
+      .process-steps    { grid-template-columns: 1fr 1fr; gap: 48px 32px; }
       .process-steps::before { display: none; }
-      .cta-section      { padding: 72px 24px; }
-      .footer           { flex-direction: column; gap: 20px; text-align: center; padding: 36px 24px; }
+    }
+
+    /* ── RESPONSIVE — Mobile ──────────────────────────────── */
+    @media (max-width: 768px) {
+      .nav              { padding: 0 20px; }
+      .nav-links        { display: none; }
+
+      .hero             { padding: 100px 20px 200px; }
+      .hero-geo         { display: none; }
+      .hero-content     { max-width: 100%; }
+
+      .hero-stats {
+        right: 20px; left: 20px;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .stat-item {
+        flex: none;
+        width: 100%;
+        padding: 16px 20px;
+        margin-left: 0;
+        border: 1px solid var(--border);
+        text-align: right;
+      }
+
+      section.section   { padding: 64px 20px; }
+      .section-header   { margin-bottom: 40px; }
+
+      .services-grid    { grid-template-columns: 1fr; }
+
+      .why-grid         { grid-template-columns: 1fr; }
+      .why-item         { border-left: none; border-bottom: 1px solid rgba(255,255,255,0.07); padding: 36px 20px; }
+      .why-item:last-child { border-bottom: none; }
+
+      .process-steps    { grid-template-columns: 1fr; gap: 32px; }
+      .process-steps::before { display: none; }
+
+      .cta-section      { padding: 64px 20px; }
+      .cta-inner        { max-width: 100%; }
+
+      .footer           { flex-direction: column; align-items: flex-end; gap: 20px; padding: 32px 20px; }
     }
   </style>
 </head>
